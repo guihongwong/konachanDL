@@ -21,7 +21,7 @@ def ask_tag():
     word = {}
     word['key'] = input("输入关键字： ")  # 用字典保存tag
     keyword = "?tags"
-    url = "http://konachan.com/post"
+    url = "http://konachan.net/post"
     search_word = urllib.parse.urlencode(word)  # parse tag形成网页需要的格式
     search_word = search_word[3:]
     full_url = url + keyword + search_word
@@ -54,7 +54,7 @@ def suggestTag(listTag, choose):  # suggestTag函数返回建议的tag对应url
 
     :rtype : str
     """
-    url = 'http://konachan.com/post'
+    url = 'http://konachan.net/post'
     keyword = '?tags='
     suggest_url = url + keyword + listTag[choose]
     return suggest_url
